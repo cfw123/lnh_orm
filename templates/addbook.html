@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block header_con %}
+    <h1>add book page</h1>
+{% endblock header_con %}
+{% block contain %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table table-striped table-hover">
+                <form action="" method="post" class="form-inline" role="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label  for="title">title</label>
+                        <input type="text" class="form-control" name="title" id="" placeholder="title">
+                    </div>
+                    <div class="form-group">
+                        <label  for="price">price</label>
+                        <input type="text" class="form-control" name="price" id="" placeholder="price">
+                    </div>
+                     <div class="form-group">
+                        <label  for="pub_date">pub_date</label>
+                        <input type="date" class="form-control" name="pub_date" id="" placeholder="pub_date">
+                    </div>
+                     <div class="form-group">
+                        <label  for="publish">publish</label>
+                        <input type="text" class="form-control" name="publish" id="" placeholder="publish">
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock contain%}

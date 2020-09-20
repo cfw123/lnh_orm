@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script href="{% static 'js/bootstrap.min.js' %}"></script>
+    <title>{% block title %}{% endblock title %}</title>
+    <style>
+        .header {
+            height: 50px;
+            width:100%;
+            background:red;
+        }
+        .contain {
+            height: 500px;
+            width:100%;
+            background:green;
+        }
+        .footer {
+            height: 50px;
+            width:100%;
+            background:gray;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    {% block header_con %}
+        <h1>This is header Page</h1>
+    {% endblock header_con %}
+
+
+</div>
+{% block contain %}
+<div class="contain">
+
+    <h1>This is contain</h1>
+</div>
+{% endblock contain %}
+<div class="footer">
+
+    <h1>This is footer</h1>
+</div>
+</body>
+</html>
